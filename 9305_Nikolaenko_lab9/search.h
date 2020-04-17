@@ -9,7 +9,6 @@ void searchForMatches(int r,person *futClub)
 {
     char s[max];
     printf("\nEnter a string to search for matches:\n");
-    //fgets(s,200,stdin);
     scanf("%s", &s);
     int i, j, c, k;
     int n, matchCounter = 0;

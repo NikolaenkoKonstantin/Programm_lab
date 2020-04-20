@@ -4,13 +4,11 @@
 #include "io.h"
 #include "split.h"
 #include <stdlib.h>
-#include <locale.h>
 
 #define max 200
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
     person *futClub;
     if ((futClub = malloc(200 * sizeof(person))) == NULL)
     {

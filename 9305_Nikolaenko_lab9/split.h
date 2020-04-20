@@ -11,6 +11,8 @@ int str_len(char *s){
     r--;
     return r;
 }
+
+
 int charToInt(char numeric)
 {
     return numeric - 48;

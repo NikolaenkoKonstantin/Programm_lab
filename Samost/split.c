@@ -1,5 +1,6 @@
 #include "split.h"
 
+//custom string length function
 int str_len(char *s){
     int r = 0;
     while(s[r] != ';') r++;
@@ -8,12 +9,14 @@ int str_len(char *s){
 }
 
 
+//converting from char to int
 int charToInt(char numeric)
 {
     return numeric - 48;
 }
 
 
+//splitting a string and assigning structure fields
 void split(char *mes, head *q){
     node *temp = NULL;
 

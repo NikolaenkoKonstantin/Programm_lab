@@ -2,7 +2,7 @@
 
 //output a node to stdin
 void output_node(node *temp){
-    printf("%4.d| %4.d|\n", temp -> id, temp -> znach);
+    printf("%4.d| %4d|\n", temp -> id, temp -> znach);
 }
 
 

@@ -1,10 +1,12 @@
 #include "io.h"
 
+//output a node to stdin
 void output_node(node *temp){
     printf("%4.d| %4.d|\n", temp -> id, temp -> znach);
 }
 
 
+//list output in stdin
 void output_list(head *q){
     if((q -> N) > 0)
     {
@@ -25,6 +27,7 @@ void output_list(head *q){
 }
 
 
+//Entering information in the node
 void enterFromKeyboard(head *q)
 {
     node *temp = NULL;
@@ -42,6 +45,8 @@ void enterFromKeyboard(head *q)
     temp -> znach = k;
 }
 
+
+//Saving the list to a new output file
 void save_data(head *q, FILE *fileread){
     node *temp = NULL;
 
@@ -61,6 +66,7 @@ void save_data(head *q, FILE *fileread){
 }
 
 
+//Reading information from the input file
 void fill_list(head *q){
     char message[max];
 

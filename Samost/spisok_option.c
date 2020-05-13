@@ -1,5 +1,6 @@
 #include "spisok_option.h"
 
+//calculating the arithmetic mean of odd numbers
 void arithmetic_mean(head *q){
     node *temp = NULL;
     int k = 0;
@@ -23,6 +24,7 @@ void arithmetic_mean(head *q){
 }
 
 
+//create head
 head *create_head(){
     head *p = NULL;
 
@@ -37,6 +39,7 @@ head *create_head(){
 }
 
 
+//create node
 node *create_node(head *q){
     node *temp;
 
@@ -53,6 +56,7 @@ node *create_node(head *q){
 }
 
 
+//add node in last
 void add_last(head *q){
     node *temp = NULL;
 
@@ -67,7 +71,7 @@ void add_last(head *q){
 }
 
 
-
+// delete first node
 void delete_first(head *q){
     node *temp = NULL;
 

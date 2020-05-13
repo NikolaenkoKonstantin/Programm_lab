@@ -1,5 +1,6 @@
 #include "free_list.h"
 
+//Cleansing the head
 void free_head(head *q){
     free_node(q -> first);
     q -> first = NULL;
@@ -8,12 +9,14 @@ void free_head(head *q){
 }
 
 
+//Clearing a node
 void free_node(node *temp){
     if((temp -> next) != NULL) temp -> next = NULL;
     free(temp);
 }
 
 
+//Cleansing of the list
 void free_list(head *q){
     node *temp = NULL;
 

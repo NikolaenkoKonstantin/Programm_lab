@@ -295,7 +295,7 @@ void fill_list(head *q)
         perror("data error");
     else
     {
-        char mes[max] = "(\_/)";
+        char mes[max] = "Kostya\0";
 
         fgets(message, max, fileread);
 

@@ -33,7 +33,7 @@ void command_selecting(head *q)
                     printf("Select the printing method:\n0) back\n1) At first\n2) From the end\n\nCommand:");
 
                     scanf("%s", s1);
-                    f = charToInt(s1[0]);
+                    g = charToInt(s1[0]);
 
                     if(str_len(s1) == 0)
                     {

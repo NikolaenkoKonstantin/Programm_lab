@@ -7,7 +7,7 @@ void command_selecting(head *q)
 
     while(f != 7)
     {
-        printf("Select a command:\n0) Reference\n1) Add\n2) Delete by search\n3) database\n4) Search\n5) Edit card\n6) Sort cards\n7) Exit\n\nCommand:");
+        printf("Select a command:\n0) Reference\n1) Add\n2) Delete by search\n3) Database\n4) Search\n5) Edit card\n6) Sort cards\n7) Exit\n\nCommand:");
         scanf("%s", s);
         f = charToInt(s[0]);
 

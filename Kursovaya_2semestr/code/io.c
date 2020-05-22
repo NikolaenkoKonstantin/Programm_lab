@@ -29,7 +29,7 @@ void inform()
 
     printf("6 column - count draws last 10 matches\n");
 
-    printf("\ndatabase:\n");
+    printf("\nDatabase:\n");
 }
 
 

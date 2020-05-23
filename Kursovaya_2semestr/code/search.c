@@ -1,5 +1,7 @@
 #include "h_files/search.h"
 
+
+//search by club
 void search_match_name(head *q)
 {
     printf("Enter a name or part of a name: ");
@@ -47,6 +49,7 @@ void search_match_name(head *q)
 }
 
 
+//search by country
 void search_match_country(head *q)
 {
     printf("Enter a name or part of a name: ");
@@ -94,6 +97,7 @@ void search_match_country(head *q)
 }
 
 
+//search by probability
 void search_match_probability(head *q)
 {
     printf("Enter the area of probability of passage to the Champions League (Probability in percentage form from 0 to 100)\n");
@@ -197,6 +201,7 @@ void search_match_probability(head *q)
 }
 
 
+//search by count wins
 void search_match_wins(head *q)
 {
     char s3[100];
@@ -266,6 +271,7 @@ void search_match_wins(head *q)
 }
 
 
+//search by count draws
 void search_match_draws(head *q)
 {
     char s3[100];
@@ -334,6 +340,7 @@ void search_match_draws(head *q)
 }
 
 
+//search combination
 void search_match(head *q)
 {
 

@@ -1,5 +1,7 @@
 #include "h_files/option_With_List.h"
 
+
+//allocating memory for the entire node
 void malloc_node(node *temp)
 {
     temp -> baza = malloc(sizeof(fut));
@@ -8,6 +10,7 @@ void malloc_node(node *temp)
 }
 
 
+//the creation of the head
 head *create_head()
 {
     head *p = NULL;
@@ -24,6 +27,7 @@ head *create_head()
 }
 
 
+//creating the first node
 node *create_node(head *q)
 {
     node *temp;
@@ -43,6 +47,7 @@ node *create_node(head *q)
 }
 
 
+//adding a node to the end
 void add_last(head *q)
 {
     node *temp = NULL;
@@ -60,6 +65,7 @@ void add_last(head *q)
 }
 
 
+//adding a node to the beginning
 node *add_first(head *q)
 {
     node *temp;
@@ -79,6 +85,7 @@ node *add_first(head *q)
 }
 
 
+//deleting the first node
 void delete_first(head *q)
 {
     node *temp = NULL;
@@ -99,6 +106,7 @@ void delete_first(head *q)
 }
 
 
+//deleting any node other than the first one
 void delete_node(node *temp, head *q)
 {
     q -> N -= 1;
@@ -119,6 +127,7 @@ void delete_node(node *temp, head *q)
 }
 
 
+//copying a node
 node *copy_node(node *p, node *temp)
 {
     temp -> id = p -> id;
@@ -137,6 +146,7 @@ node *copy_node(node *p, node *temp)
 }
 
 
+//transfer of the node
 void transfer_node(node *p, node *temp, head *q)
 {
     int f = 0;
@@ -166,6 +176,7 @@ void transfer_node(node *p, node *temp, head *q)
 }
 
 
+//a copy of the list
 void copy_list(head *q1, head *q)
 {
     node *temp1 = create_node(q1);;

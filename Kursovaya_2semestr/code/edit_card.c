@@ -1,5 +1,6 @@
 #include "h_files/edit_card.h"
 
+//edit the fields in the card
 void edit_card(head *q)
 {
     node *temp = q -> first;

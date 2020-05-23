@@ -1,6 +1,7 @@
 #include "h_files/split.h"
 
 
+//string length
 int str_len(char *s)
 {
     int r = 0;
@@ -11,12 +12,14 @@ int str_len(char *s)
 }
 
 
+//translation from char to int
 int charToInt(char numeric)
 {
     return numeric - 48;
 }
 
 
+//splitting a line
 void split(char *mes, head *q)
 {
     node *temp = NULL;

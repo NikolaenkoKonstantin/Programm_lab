@@ -332,14 +332,4 @@ void fill_list(head *q)
     output_list(q);
 
     command_selecting(q);
-
-    FILE *filewrite = fopen("data_base.csv", "w");
-
-    save_data(q, filewrite);
-
-    if (fclose(filewrite) == EOF)
-        printf("Closing error code: %d\n", errno);
-    else
-        printf("Closing OK\n");
-
 }

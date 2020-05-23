@@ -1,5 +1,6 @@
 #include "h_files/command_selecting.h"
 
+//Selecting a command from the menu
 void command_selecting(head *q)
 {
     char s[100];

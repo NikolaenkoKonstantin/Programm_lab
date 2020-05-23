@@ -1,5 +1,6 @@
 #include "h_files/delete_by_search.h"
 
+//search for deletion by club
 void search_name(head *q)
 {
     printf("Enter a name or part of a name: ");
@@ -54,6 +55,7 @@ void search_name(head *q)
 }
 
 
+//search for deletion by country
 void search_country(head *q)
 {
     printf("Enter a name or part of a name: ");
@@ -108,6 +110,7 @@ void search_country(head *q)
 }
 
 
+//search for deletion by probability
 void search_probability(head *q)
 {
     printf("Enter the area of probability of passage to the Champions League (Probability in percentage form from 0 to 100)\n");
@@ -219,6 +222,7 @@ void search_probability(head *q)
 }
 
 
+//search for deletion by count wins
 void search_wins(head *q)
 {
     char s3[100];
@@ -294,6 +298,7 @@ void search_wins(head *q)
 }
 
 
+//search for deletion by count draws
 void search_draws(head *q)
 {
     char s3[100];
@@ -369,6 +374,7 @@ void search_draws(head *q)
 }
 
 
+//search by choice
 void search_matches(head *q)
 {
     char s[100];

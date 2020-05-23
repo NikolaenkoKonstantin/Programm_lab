@@ -1,6 +1,7 @@
 #include "h_files/io.h"
 
 
+//information on working
 void spravka()
 {
     printf("Author: 9305_NIKOLAENKO_KONSTANTIN");
@@ -15,6 +16,7 @@ void spravka()
 }
 
 
+//The information in the table
 void inform()
 {
     printf("1 column - numbering\n");
@@ -33,12 +35,14 @@ void inform()
 }
 
 
+//the output node
 void *output_node(node *temp, int i)
 {
     printf("%2d| %15s | %15s | %6.2lf | %4.lf | %4.lf |\n", i, temp -> baza -> name, temp -> baza -> country, temp -> baza -> probability, temp -> baza -> statistics[0], temp -> baza -> statistics[1]);
 }
 
 
+//list output
 void output_list(head *q)
 {
     if((q -> N) > 1)
@@ -82,6 +86,7 @@ void output_list(head *q)
 }
 
 
+//list output from the end
 void output_list_reverse(head *q)
 {
     if((q -> N) > 1)
@@ -125,6 +130,7 @@ void output_list_reverse(head *q)
 }
 
 
+//entering a card using the keyboard
 void enterFromKeyboard(head *q)
 {
     node *temp = NULL;
@@ -247,6 +253,7 @@ void enterFromKeyboard(head *q)
 }
 
 
+//saving information in a file
 void save_data(head *q, FILE *fileread)
 {
     if(q -> N > 0)
@@ -285,6 +292,7 @@ void save_data(head *q, FILE *fileread)
 }
 
 
+//reading information from a file
 void fill_list(head *q)
 {
     char message[max];

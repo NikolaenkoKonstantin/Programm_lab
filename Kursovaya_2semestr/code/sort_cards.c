@@ -1,5 +1,7 @@
 #include "h_files/sort_cards.h"
 
+
+//sorting by club
 void sort_names(head *q)
 {
     if(q -> N > 1)
@@ -61,6 +63,7 @@ void sort_names(head *q)
 }
 
 
+//sorting by country
 void sort_country(head *q)
 {
     if(q -> N > 1)
@@ -122,6 +125,7 @@ void sort_country(head *q)
 }
 
 
+//sorting by probability
 void sort_probability(head *q)
 {
     if(q -> N > 1)
@@ -184,6 +188,7 @@ void sort_probability(head *q)
 }
 
 
+//sorting by count wins
 void sort_wins(head *q)
 {
     if(q -> N > 1)
@@ -246,6 +251,7 @@ void sort_wins(head *q)
 }
 
 
+//sorting by count draws
 void sort_draws(head *q)
 {
     if(q -> N > 1)
@@ -308,6 +314,7 @@ void sort_draws(head *q)
 }
 
 
+//selecting sorting
 void sort_cards(head *q)
 {
     char s[100];

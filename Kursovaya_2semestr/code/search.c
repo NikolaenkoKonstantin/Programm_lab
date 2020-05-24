@@ -17,7 +17,6 @@ void delete_by_number(head *q){
 
         if(l == -1){
             node *temp = q -> first;
-            printf("\nf = %d\n", f);
 
             for(int i = 1; i < f; i++) temp = temp -> next;
 
@@ -26,6 +25,7 @@ void delete_by_number(head *q){
         }
     }
 
+    if(q -> N == 0) printf("\n\nDatabase is empty and there is nothing to delete");
 }
 
 
@@ -200,43 +200,45 @@ void input_draws(head *q, int n)
 //Deleting cards, selecting a field
 void deleteCards(head *q)
 {
-    char s[400] = "Select which field you want to find matches for:\n0) back\n1) by number\n2) Name club\n3) Country of the club\n4) probability of the club's passage to the Champions League\n5) wins last 10 matches\n6) count draws last 10 matches\n\ncommand: ";
-    int g;
-    int k = 0;
+    if(q -> N > 0){
+        char s[400] = "Select which field you want to find matches for:\n0) back\n1) by number\n2) Name club\n3) Country of the club\n4) probability of the club's passage to the Champions League\n5) wins last 10 matches\n6) count draws last 10 matches\n\ncommand: ";
+        int g;
+        int k = 0;
 
-    while(k != 1)//selecting a deletion option
-    {
-        CLS;
-        g = input(s);
+        while(k != 1)//selecting a deletion option
+        {
+            CLS;
+            g = input(s);
 
-        if((g < 7) && (g >= 0)){
-            if(g == 1){
-                k = 1;
-                delete_by_number(q);
+            if((g < 7) && (g >= 0)){
+                if(g == 1){
+                    k = 1;
+                    delete_by_number(q);
 
-            }else if(g == 2){
-                k = 1;
-                input_name(q, 1);
+                }else if(g == 2){
+                    k = 1;
+                    input_name(q, 1);
 
-            }else if(g == 3){
-                k = 1;
-                input_country(q, 2);
+                }else if(g == 3){
+                    k = 1;
+                    input_country(q, 2);
 
-            }else if(g == 4){
-                k = 1;
-                input_probability(q, 3);
+                }else if(g == 4){
+                    k = 1;
+                    input_probability(q, 3);
 
-            }else if(g == 5){
-                k  = 1;
-                input_wins(q, 4);
+                }else if(g == 5){
+                    k  = 1;
+                    input_wins(q, 4);
 
-            }else if(g == 6){
-                k = 1;
-                input_draws(q, 5);
+                }else if(g == 6){
+                    k = 1;
+                    input_draws(q, 5);
 
-            }else if(g == 0) k = 1;
+                }else if(g == 0) k = 1;
+            }
         }
-    }
+    }else printf("\n\nDatabase is empty and there is nothing to delete");
 }
 
 

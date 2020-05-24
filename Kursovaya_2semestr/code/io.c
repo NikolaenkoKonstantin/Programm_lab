@@ -388,7 +388,7 @@ void fill_list(head *q)
 //menu
 void menu(head *q)
 {
-    char s[400] = "Select a command:\n0) Reference\n1) Add\n2) Delete by search\n3) database\n4) Search\n5) Edit card\n6) Sort cards\n7) Save card index\n8) Exit\n\nCommand:";
+    char s[400] = "Select a command:\n0) Reference\n1) Add\n2) Delete\n3) database\n4) Search\n5) Edit card\n6) Sort cards\n7) Save card index\n8) Exit\n\nCommand:";
     int f = 9;
     int d = 0;
 

@@ -256,6 +256,8 @@ void enterFromKeyboard(head *q)
         }
 
         temp -> baza -> probability = (temp -> baza -> statistics[0] * 2 + temp -> baza -> statistics[1]) / 20;
+
+        check_on_repeat(temp, q);
     }
 }
 

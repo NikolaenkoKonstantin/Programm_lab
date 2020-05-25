@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "h_files\option.h"
-#include "h_files\struct.h"
-#include "h_files\io.h"
+#include "h_files/option.h"
+#include "h_files/struct.h"
+#include "h_files/io.h"
 
 
 int main()

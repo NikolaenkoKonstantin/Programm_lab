@@ -52,12 +52,12 @@ void edit_card(head *q)
         char str[100] = "If you want to go back to the menu write 0\nEnter the number of the card you want to edit:";
 
         f = input(str);//enter the card number
-
+        int i;
         node *temp = q -> first;
 
         if(f != -1)
             if(f <= q -> N)
-                for(int i = 1; i < f; i++)//search for the desired node
+                for(i = 1; i < f; i++)//search for the desired node
                     temp = temp -> next;
 
     if(f > 0)
@@ -69,7 +69,7 @@ void edit_card(head *q)
         {
             CLS;
             printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
-            output_node(temp, 1);
+            output_node(temp, i);
             printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
 
             char s4[300] = "Select the field to edit:\n1) Name club\n2) Country of the club\n3) Wins and draws\n\ncommand: ";

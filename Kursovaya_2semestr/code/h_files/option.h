@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include "io.h"
 
+void check_on_repeat(node *temp, head *q);
+
 void free_head(head *q);
 
 void free_node(node *temp);

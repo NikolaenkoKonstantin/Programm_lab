@@ -95,7 +95,7 @@ void inform()
 //output node
 void *output_node(node *temp, int i)
 {
-    printf("%2d| %18s | %15s | %6.2lf | %4.lf | %4.lf |\n", i, temp -> baza -> name, temp -> baza -> country, temp -> baza -> probability, temp -> baza -> statistics[0], temp -> baza -> statistics[1]);
+    printf("%2d| %18s | %18s | %6.2lf | %4.lf | %4.lf |\n", i, temp -> baza -> name, temp -> baza -> country, temp -> baza -> probability, temp -> baza -> statistics[0], temp -> baza -> statistics[1]);
 }
 
 
@@ -107,7 +107,7 @@ void output_list(head *q)
         node *temp = NULL;
         temp = q -> first;
         inform();
-        printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
+        printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
 
         output_node(temp, 1);
         temp = temp -> next;
@@ -115,15 +115,15 @@ void output_list(head *q)
         int i = 2;
         while((temp -> next) != NULL)
         {
-            printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
+            printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
             output_node(temp, i);
             temp = temp -> next;
             i++;
         }
 
-        printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
         output_node(temp, i);
-        printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
     }
     else if(q -> N == 0)
         printf("\ndatabase is empty!\n");
@@ -133,9 +133,9 @@ void output_list(head *q)
         temp = q -> first;
         inform();
 
-        printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
         output_node(temp, 1);
-        printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
     }
 }
 
@@ -148,7 +148,7 @@ void output_list_reverse(head *q)
         node *temp = NULL;
         temp = q -> last;
         inform();
-        printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
+        printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
 
         output_node(temp, 1);
         temp = temp -> prev;
@@ -156,15 +156,15 @@ void output_list_reverse(head *q)
         int i = 2;
         while((temp -> prev) != NULL)
         {
-            printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
+            printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
             output_node(temp, i);
             temp = temp -> prev;
             i++;
         }
 
-        printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
         output_node(temp, i);
-        printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
     }
     else if(q -> N == 0)
         printf("\ndatabase is empty!\n");
@@ -174,9 +174,9 @@ void output_list_reverse(head *q)
         inform();
         temp = q -> first;
 
-        printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n");
         output_node(temp, 1);
-        printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
+        printf("_ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
     }
 }
 
@@ -222,11 +222,11 @@ void enterFromKeyboard(head *q)
         char s[10];
 
         fgets(s, 10, stdin);//enter the name of the club
-        fgets((temp -> baza -> name), 20, stdin);
+        fgets((temp -> baza -> name), 30, stdin);
         temp -> baza -> name[strlen(temp -> baza -> name) - 1] = '\0';
 
         printf("Country: ");//enter the country name
-        fgets((temp -> baza -> country), 20, stdin);
+        fgets((temp -> baza -> country), 30, stdin);
         temp -> baza -> country[strlen(temp -> baza -> country) - 1] = '\0';
 
         int l = 0;

@@ -1,5 +1,29 @@
 #include "h_files/option.h"
 
+//checking for uniqueness
+void check_on_repeat(node *temp, head *q){
+    /*If the same element is found by the name of the club, it is immediately deleted*/
+    node *temp1 = q -> first;
+    int t = q -> N,
+        key = 0;
+
+    for(int i = 0; i < t; i++){
+        if(temp1 != temp)
+            if(strcmp(temp -> baza -> name, temp1 -> baza -> name) == 0){
+                    key = 1;
+                    i == t;
+            }
+        temp1 = temp1 -> next;
+    }
+
+    if(key == 1){
+        if(temp == q -> first) delete_first(q);
+        else delete_node(temp -> prev, q);
+        printf("\nThis command already exists in the file system");
+    }
+}
+
+
 //cleaning the head
 void free_head(head *q)
 {

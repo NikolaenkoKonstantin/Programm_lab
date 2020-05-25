@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "struct.h"
 #include <stdlib.h>
+#include <errno.h>
 #include "option.h"
 #include "search.h"
 #include "sort.h"

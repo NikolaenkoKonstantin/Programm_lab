@@ -35,5 +35,4 @@ void transfer_node(node *p, node *temp, head *q);
 
 void copy_list(head *q1, head *q);
 
-
 #endif // OPTION_H_INCLUDED

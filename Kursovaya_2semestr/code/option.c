@@ -11,7 +11,7 @@ void check_on_repeat(node *temp, head *q){
         if(temp1 != temp)
             if(strcmp(temp -> baza -> name, temp1 -> baza -> name) == 0){
                     key = 1;
-                    i == t;
+                    i = t;
             }
         temp1 = temp1 -> next;
     }

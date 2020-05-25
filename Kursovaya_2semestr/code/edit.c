@@ -55,54 +55,54 @@ void edit_card(head *q)
         int i;
         node *temp = q -> first;
 
-        if(f != -1)
-            if(f <= q -> N)
-                for(i = 1; i < f; i++)//search for the desired node
-                    temp = temp -> next;
+        if((f != -1) && (f <= q -> N)){
+            for(i = 1; i < f; i++)//search for the desired node
+                temp = temp -> next;
 
-    if(f > 0)
-    {
-        int g;
-        int k = 0;
-
-        while(k != 1)//edit
-        {
-            CLS;
-            printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
-            output_node(temp, i);
-            printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
-
-            char s4[300] = "Select the field to edit:\n1) Name club\n2) Country of the club\n3) Wins and draws\n\ncommand: ";
-            g = input(s4);//selecting an edit field
-
-            if((g >= 0) && (g <= 3))
+            if(f > 0)
             {
-                if(g == 0)k = 1;
+                int g;
+                int k = 0;
 
-                else if(g == 1){
-                    k = 1;
-                    char s9[10];
-                    printf("Club: ");//change is being made
-                    fgets(s9, 10, stdin);
-                    fgets((temp -> baza -> name), 20, stdin);
-                    temp -> baza -> name[strlen(temp -> baza -> name) - 1] = '\0';
+                while(k != 1)//edit
+                {
+                    CLS;
+                    printf("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n");
+                    output_node(temp, i);
+                    printf("_ |_ _ _ _ _ _ _ _ _ _ | _ _ _ _ _ _ _ _ |_ _ _ _ |_ _ _ |_ _ _ |\n\n");
 
-                }else if(g == 2){
-                    char s9[10];
-                    k = 1;
-                    printf("Country: ");//change is being made
-                    fgets(s9, 10, stdin);
-                    fgets((temp -> baza -> country), 20, stdin);
-                    temp -> baza -> country[strlen(temp -> baza -> country) - 1] = '\0';
+                    char s4[300] = "Select the field to edit:\n1) Name club\n2) Country of the club\n3) Wins and draws\n\ncommand: ";
+                    g = input(s4);//selecting an edit field
 
-                }else if(g == 3){
-                    k = 1;
-                    edit_wins(temp);
-                    edit_draws(temp);
-                    temp -> baza -> probability = (temp -> baza -> statistics[0] * 2 + temp -> baza -> statistics[1]) / 20;
+                    if((g >= 0) && (g <= 3))
+                    {
+                        if(g == 0)k = 1;
+
+                        else if(g == 1){
+                            k = 1;
+                            char s9[10];
+                            printf("Club: ");//change is being made
+                            fgets(s9, 10, stdin);
+                            fgets((temp -> baza -> name), 20, stdin);
+                            temp -> baza -> name[strlen(temp -> baza -> name) - 1] = '\0';
+
+                        }else if(g == 2){
+                            char s9[10];
+                            k = 1;
+                            printf("Country: ");//change is being made
+                            fgets(s9, 10, stdin);
+                            fgets((temp -> baza -> country), 20, stdin);
+                            temp -> baza -> country[strlen(temp -> baza -> country) - 1] = '\0';
+
+                        }else if(g == 3){
+                            k = 1;
+                            edit_wins(temp);
+                            edit_draws(temp);
+                            temp -> baza -> probability = (temp -> baza -> statistics[0] * 2 + temp -> baza -> statistics[1]) / 20;
+                        }
+                    }
                 }
             }
         }
-    }
     }
 }

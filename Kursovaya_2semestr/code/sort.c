@@ -102,102 +102,47 @@ void sortMega(head *q, int n)
 }
 
 
-//transition function for name
-void sort_names(head *q)
-{
-    if(q -> N > 1){
-        sortMega(q, 1);
-        output_list(q);
-    }
-    else
-        printf("\nRESULT:\nSorting is not possible\n");
-}
-
-
-//transition function for country
-void sort_country(head *q)
-{
-    if(q -> N > 1){
-        sortMega(q, 2);
-        output_list(q);
-    }
-    else
-        printf("\nRESULT:\nSorting is not possible\n");
-}
-
-
-//transition function for probability
-void sort_probability(head *q)
-{
-    if(q -> N > 1){
-        sortMega(q, 3);
-        output_list(q);
-    }
-    else
-        printf("\nRESULT:\nSorting is not possible\n");
-}
-
-
-//transition function for wins
-void sort_wins(head *q)
-{
-    if(q -> N > 1){
-        sortMega(q, 4);
-        output_list(q);
-    }
-    else
-        printf("\nRESULT:\nSorting is not possible\n");
-}
-
-
-//transition function for draws
-void sort_draws(head *q)
-{
-    if(q -> N > 1){
-        sortMega(q, 5);
-        output_list(q);
-    }
-    else
-        printf("\nRESULT:\nSorting is not possible\n");
-}
-
-
 //selecting sorting
 void sort_cards(head *q)
 {
-    char s[300] = "Select a field to sort:\n0) back\n1) Name club\n2) Country of the club\n3) probability of the club's passage to the Champions League\n4) wins last 10 matches\n5) count draws last 10 matches\n\ncommand: ";
-    int g;
-    int k = 0;
+    if(q -> N > 1){
+        char s[300] = "Select a field to sort:\n0) back\n1) Name club\n2) Country of the club\n3) probability of the club's passage to the Champions League\n4) wins last 10 matches\n5) count draws last 10 matches\n\ncommand: ";
+        int g;
+        int k = 0;
 
-    while(k != 1)//selecting a sort field
-    {
-        CLS;
-        g = input(s);
+        while(k != 1)//selecting a sort field
+        {
+            CLS;
+            g = input(s);
 
-        if((g <= 5) && (g >= 0)){
-            if(g == 1){
-                k = 1;
-                sort_names(q);
+            if((g <= 5) && (g >= 0)){
+                if(g == 1){
+                    k = 1;
+                    sortMega(q, 1);
 
-            }else if(g == 2){
-                k = 1;
-                sort_country(q);
+                }else if(g == 2){
+                    k = 1;
+                    sortMega(q, 2);
 
-            }else if(g == 3){
-                k = 1;
-                sort_probability(q);
+                }else if(g == 3){
+                    k = 1;
+                    sortMega(q, 3);
 
-            }else if(g == 4){
-                k = 1;
-                sort_wins(q);
+                }else if(g == 4){
+                    k = 1;
+                    sortMega(q, 4);
 
-            }else if(g == 5){
-                k  = 1;
-                sort_draws(q);
+                }else if(g == 5){
+                    k  = 1;
+                    sortMega(q, 5);
 
-            }else if(g == 0){
-                k = 1;
+                }else if(g == 0){
+                    k = 1;
+                }
             }
         }
-    }
+
+        output_list(q);
+
+    }else printf("\nRESULT:\nSorting is not possible\n");
 }

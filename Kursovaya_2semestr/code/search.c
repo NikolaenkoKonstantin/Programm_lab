@@ -115,7 +115,7 @@ void input_name(head *q, int n)
     printf("Enter a name or part of a name: ");
     char s[100];
 
-    scanf("%s", s);
+    scanf("%100s", s);
     s[strlen(s)] = '\0';
 
     search_mega(q, s, n, 1, 1, 1);
@@ -128,7 +128,7 @@ void input_country(head *q, int n)
     printf("Enter a name or part of a name: ");
     char s[100];
 
-    scanf("%s", s);
+    scanf("%100s", s);
     s[strlen(s)] = '\0';
 
     search_mega(q, s, n, 1, 1, 1);
@@ -139,20 +139,20 @@ void input_country(head *q, int n)
 void input_probability(head *q, int n)
 {
     int beg;
-    char s3[400] = "Enter the area of probability of passage to the Champions League (Probability in percentage form from 0 to 100)\nfrom: ";
+    char s[400] = "Enter the area of probability of passage to the Champions League (Probability in percentage form from 0 to 100)\nfrom: ";
     int l = 0, f;
 
     while(l != 1){
-        f = input(s3);
+        f = input(s);
         if((f != -1) && (f <= 100) && (f >= 0)) l = 1;
     }
 
     beg = f;
     l = 0;
-    char s4[100] = "before: ";
+    char s1[100] = "before: ";
 
     while(l != 1){
-        f = input(s4);
+        f = input(s1);
         if((f != -1) && (f <= 100) && (f >= 0)) l = 1;
     }
 
@@ -161,39 +161,39 @@ void input_probability(head *q, int n)
     float b = beg / o;
     float e = en / o;
 
-    search_mega(q, s3, n, b, e, 1);
+    search_mega(q, s, n, b, e, 1);
 }
 
 
 //Entering the number of wins
 void input_wins(head *q, int n)
 {
-    char s3[100] = "Wins last 10 matches: ";
+    char s[100] = "Wins last 10 matches: ";
     int l = 0;
-    int k = 0;
+    int kod = 0;
 
     while(l != 1){
-        k = input(s3);
-        if((k != -1) && (k <= 10) && (k >= 0)) l = 1;
+        kod = input(s);
+        if((kod != -1) && (kod <= 10) && (kod >= 0)) l = 1;
     }
 
-    search_mega(q, s3, n, 1, 1, k);
+    search_mega(q, s, n, 1, 1, kod);
 }
 
 
 //Entering the number of draws
 void input_draws(head *q, int n)
 {
-    char s3[100] = "Wins last 10 matches: ";
+    char s[100] = "Wins last 10 matches: ";
     int l = 0;
-    int k = 0;
+    int kod = 0;
 
     while(l != 1){
-        k = input(s3);
-        if((k != -1) && (k <= 10) && (k >= 0)) l = 1;
+        kod = input(s);
+        if((kod != -1) && (kod <= 10) && (kod >= 0)) l = 1;
     }
 
-    search_mega(q, s3, n, 1, 1, k);
+    search_mega(q, s, n, 1, 1, kod);
 }
 
 

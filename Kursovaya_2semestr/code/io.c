@@ -364,8 +364,8 @@ void fill_list(head *q)
 
         fgets(message, max, fileread);
 
-        if(strlen(message) > 3){//reading the string until it is equal to the previous one
-            while (strcmp(message, mes) != 0)
+        if(strlen(message) > 3){//checking whether the file contains information
+            while (strcmp(message, mes) != 0)//reading the string until it is equal to the previous one
             {
                 char *str;
 

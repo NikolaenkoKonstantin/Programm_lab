@@ -3,12 +3,12 @@
 
 struct MacAdress
 {
-    unsigned char byte1 : 8,
-                  byte2 : 8,
-                  byte3 : 8,
-                  byte4 : 8,
-                  byte5 : 8,
-                  byte6 : 8;
+    unsigned char byte1,
+                  byte2,
+                  byte3,
+                  byte4,
+                  byte5,
+                  byte6;
 }MacA;
 
 
@@ -34,13 +34,13 @@ int main()
     kod.byte4 = x4;
     kod.byte5 = x5;
     kod.byte6 = x6;
-    printf("\nEnter Mac address:\n%X.%X.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
+    printf("\nEnter Mac address:\n%X.%d.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
 
     /*convert the manufacturer's code*/
-    kod.byte1 &= 'AF';
-    kod.byte2 |= '3A';
-    kod.byte3 ^= 'DC';
-    printf("\nChanged Mac address:\n%X.%X.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
+    kod.byte1 &= 175;
+    kod.byte2 |= 58;
+    kod.byte3 ^= 220;
+    printf("\nChanged Mac address:\n%X.%d.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
 
     return 0;
 }

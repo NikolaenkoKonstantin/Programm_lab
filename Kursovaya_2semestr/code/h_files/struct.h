@@ -10,10 +10,10 @@
 
 typedef struct fut
 {
-    char *name;
-    char *country;
-    float probability;
-    float statistics[2];
+    char *name; /*name club*/
+    char *country; /*name country*/
+    float probability; /*probability of getting into the Champions League*/
+    float statistics[2]; /*[0] - count wins, [1] - count draws */
 } fut;
 
 

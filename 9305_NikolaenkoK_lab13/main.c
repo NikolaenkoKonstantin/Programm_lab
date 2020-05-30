@@ -34,13 +34,13 @@ int main()
     kod.byte4 = x4;
     kod.byte5 = x5;
     kod.byte6 = x6;
-    printf("\nEnter Mac address:\n%X.%d.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
+    printf("\nEnter Mac address:\n%X.%X.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
 
     /*convert the manufacturer's code*/
     kod.byte1 &= 175;
     kod.byte2 |= 58;
     kod.byte3 ^= 220;
-    printf("\nChanged Mac address:\n%X.%d.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
+    printf("\nChanged Mac address:\n%X.%X.%X.%X.%X.%X\n", kod.byte1, kod.byte2, kod.byte3, kod.byte4, kod.byte5, kod.byte6);
 
     return 0;
 }
